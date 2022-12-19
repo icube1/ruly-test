@@ -3,6 +3,7 @@ import fetch from "node-fetch";
 import AdmZip from "adm-zip"
 import * as convert from "xml-js"
 
+
 async function downloadBic(fileUrl, destPath) {
     let data = [];
 
