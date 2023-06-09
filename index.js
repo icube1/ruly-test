@@ -35,15 +35,18 @@ function extractZipContent(destPath) {
   return items;
 }
 
-// Функция для обработки данных 
+// Функция для обработки данных
 function processData(items) {
   const data = [];
   items.forEach((element) => {
     if (element.elements.length > 1) {
-      const NameP = iconv.decode(Buffer.from(element.elements[0].attributes.NameP, 'binary'), 'win1251');
+      const NameP = iconv.decode(
+        Buffer.from(element.elements[0].attributes.NameP, "binary"),
+        "win1251"
+      );
       const BIC = element.attributes.BIC;
       element.elements.shift();
-      
+
       const accounts = element.elements.reduce((data, el) => {
         if (el.attributes.Account) {
           data.push({
@@ -55,7 +58,7 @@ function processData(items) {
         return data;
       }, []);
 
-      data.push(...accounts); 
+      data.push(...accounts);
     }
   });
   return data;
@@ -91,6 +94,6 @@ let fileUrl = "https://www.cbr.ru/s/newbik";
 const { result, time } = await measureTime(() => downloadBic(fileUrl, path));
 const memory = measureMemory();
 
-console.log('Result:', result);
-console.log('Time:', time, 'ms');
-console.log('Memory:', memory, 'MB');
+console.log("Result:", result);
+console.log("Time:", time, "ms");
+console.log("Memory:", memory, "MB");
