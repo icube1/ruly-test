@@ -1,6 +1,6 @@
-#Тестовое 'Рулю.ру'
+# Тестовое 'Рулю.ру'
 
-##Quick Start:
+## Quick Start:
 
 - _Clone the repository to your local machine._
 - _Install the dependencies by running the command npm install._
