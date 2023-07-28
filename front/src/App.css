@@ -1,0 +1,74 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+}
+
+.gmail-container {
+  display: flex;
+  justifyContent: center;
+}
+.gmail-container__left-panel {
+  width: 200px;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+.folder-list {
+  width: 150px;
+  /* background-color: red; */
+}
+.folder-list__list {
+  list-style: none;
+  padding: 0;
+}
+.folder-list__item {
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: 'black'
+}
+.gmail-container__email-list {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #fff;
+}
+.email-list {}
+.email-list__item {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.email-list__sender {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: black;
+}
+.email-list__subject {
+  margin-bottom: 5px;
+  color: grey;
+}
+.email-list__date {
+  color: #888;
+  font-size: 12px;
+}
+/* Header */
+.header {
+  background-color: #f44336;
+  padding: 20px;
+  color: #fff;
+}
+
+.header__title {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer__text {
+  margin: 0;
+  color: black;
+}
